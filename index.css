@@ -165,8 +165,6 @@ header nav ul li a:hover::after {
     transform: translate(-5%, -15%);
 }
 
-
-
 /* --------- about info section ------------- */
 
 .about-info {
@@ -271,7 +269,6 @@ section h2 {
     display: flex;
     gap: 20px;
     list-style: none;
-    cursor: pointer;
 }
 
 .article-container li {
@@ -279,9 +276,13 @@ section h2 {
     flex-shrink: 0;
     flex-basis: calc(25% - 15px);
     background-color: var(--white);
-    /* box-shadow: 0 0 10px green; */
     border-radius: 5px;
     height: fit-content;
+    cursor: pointer;
+}
+
+.article-container li:hover h3 {
+    color: var(--lime-green);
 }
 
 .article-container li img {
@@ -359,7 +360,6 @@ footer ul {
     display: flex;
     gap: 100px;
     align-items: center;
-    /* justify-content: space-between; */
 }
 
 .footer-left-one ul {
@@ -368,9 +368,8 @@ footer ul {
     gap: 20px;
 }
 
-.footer-left-one ul li a:hover {
-    /* ------------- need to make image (svg) change color on hover --------------- */
-    color: var(--lime-green);
+.social-icons:hover path {
+    fill: var(--lime-green);
 }
 
 .footer-left-two {
@@ -400,7 +399,6 @@ footer ul {
     margin-top: 30px;
     color: var(--grayish-blue);
 }
-
 
 @media (max-width: 1100px) {
     header {
@@ -442,6 +440,7 @@ footer ul {
         height: calc(100vh - 64px);
         position: fixed;
         background-image: linear-gradient(rgba(0, 0, 0, 0.534), transparent);
+        top: 64px;
         bottom: 0;
         left: 0;
         padding: 40px;
@@ -512,8 +511,9 @@ footer ul {
 @media (max-width: 500px) {
 
     /* body {
-        font-size: 14px;
+        font-size: 15px;
     } */
+
     header {
         padding: 0 20px;
     }
@@ -539,10 +539,7 @@ footer ul {
     }
 }
 
-
-
 @media (max-width: 950px) {
-    /* ----------- working here ------------- */
     footer {
         flex-direction: column;
         text-align: center;
